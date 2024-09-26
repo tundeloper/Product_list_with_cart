@@ -8,9 +8,14 @@ const config: Config = {
   ],
   theme: {
     extend: {
+        fontSize: {
+          'ds': '1.5rem', // Custom font size
+        },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        lightdk: '#a89793',
+        background: '#fcf8f5',
+        dk: "#230a06",
+        rd: "#ca3c18",
       },
     },
   },
