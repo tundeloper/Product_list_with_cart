@@ -9,7 +9,7 @@ import IncrementSvg from "../SVGS/increment";
 const Meals = () => {
     const [data, setData] = useState<{image: {thumbnail: string, mobile: string, tablet: '', desktop: ''}, name: string, price: number, category: string}[]>([]);
     // const [cart, setCart] = useState<{}[]>([])
-    // const [select, setSelect] = useState<string[]>(['notSelect', '', 'notSelect','notSelect','notSelect','notSelect','notSelect' ,'notSelect', 'notSelect'])
+    const [select, setSelect] = useState<string[]>(['notSelect', '', 'notSelect','notSelect','notSelect','notSelect','notSelect' ,'notSelect', 'notSelect'])
     const [loading, setLoading] = useState(true); 
     const [error, setError] = useState(null);
     useEffect(() => {
@@ -25,7 +25,8 @@ const Meals = () => {
           });
       }, []);
 
-      // const addToCartHandler = (data: any, i: number) => {
+      const addToCartHandler = (data: any, i: number) => {
+        select[i] = 'select'
         // let arr: string[] = [...select]
         // select.forEach((str, j, arr) => {
         //   if(i === j)
@@ -33,9 +34,7 @@ const Meals = () => {
         //   setSelect(arr)
         //   console.log(select)
         // });
-
-
-      // }
+      }
 
       // const initial = <button className="flex items-center justify-center justify-between w-[9rem] absolute bottom-[-1rem] right-1/2 translate-x-1/2 z-[10]  p-3 bg-white text-rd border border-rd rounded-full" onClick={() => {addToCartHandler(data)}}>
       // <CartSvg />
@@ -57,12 +56,12 @@ const Meals = () => {
         <div className="w-full height-64 bg-black overflow-hidden border-2 border-rd rounded-lg">
           <Image alt='image' src={data.image.desktop} width={200} height={200} style={{height: 'auto', width: '100%'}}/>
         </div>
-        {i % 2 === 0 ? <button className="flex items-center justify-center justify-between w-[9rem] absolute bottom-[-1rem] right-1/2 translate-x-1/2 z-[10]  p-3 border border-rd rounded-full bg-rd" onClick={() => {}}>
+        {select[i] === 'select' ? <button className="flex items-center justify-center justify-between w-[9rem] absolute bottom-[-1rem] right-1/2 translate-x-1/2 z-[10]  p-3 border border-rd rounded-full bg-rd" onClick={() => {addToCartHandler(data, i)}}>
       <DecrementSvg />
       <p className="font-light">1</p>
       <IncrementSvg />
       </button> :
-      <button className="flex items-center justify-center justify-between w-[9rem] absolute bottom-[-1rem] right-1/2 translate-x-1/2 z-[10]  p-3 bg-white text-rd border border-rd rounded-full" onClick={() => {}}>
+      <button className="flex items-center justify-center justify-between w-[9rem] absolute bottom-[-1rem] right-1/2 translate-x-1/2 z-[10]  p-3 bg-white text-rd border border-rd rounded-full" onClick={() => {addToCartHandler(data, i)}}>
       <CartSvg />
       <p>Add to cart</p>
       </button>
