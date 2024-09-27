@@ -27,10 +27,10 @@ const Meals = () => {
 
       const addToCartHandler = (data: any, i: number) => {
         setSelect((prev) => {
-          const arr = select
-          arr[i] = 'select'
-          return arr
+          prev[i] = 'select'
+          return prev
         })
+        console.log(select)
         // let arr: string[] = [...select]
         // select.forEach((str, j, arr) => {
         //   if(i === j)
