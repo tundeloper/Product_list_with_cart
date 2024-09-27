@@ -9,7 +9,7 @@ import IncrementSvg from "../SVGS/increment";
 const Meals = () => {
     const [data, setData] = useState<{image: {thumbnail: string, mobile: string, tablet: '', desktop: ''}, name: string, price: number, category: string}[]>([]);
     // const [cart, setCart] = useState<{}[]>([])
-    const [select, _] = useState<string[]>(['notSelect', '', 'notSelect','notSelect','notSelect','notSelect','notSelect' ,'notSelect', 'notSelect'])
+    const [select] = useState<string[]>(['notSelect', '', 'notSelect','notSelect','notSelect','notSelect','notSelect' ,'notSelect', 'notSelect'])
     const [loading, setLoading] = useState(true); 
     const [error, setError] = useState(null);
     useEffect(() => {
