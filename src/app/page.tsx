@@ -1,5 +1,3 @@
-import Image from "next/image";
-import EmptyCart from "./SVGS/empty";
 import NoCart from './components/noCart'
 import Meals from "./components/allMeals";
 

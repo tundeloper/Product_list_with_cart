@@ -2,7 +2,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import image from '../../public/assets/images/image-baklava-desktop.jpg'
 import CartSvg from "../SVGS/cart";
 import DecrementSvg from "../SVGS/decrement";
 import IncrementSvg from "../SVGS/increment";
@@ -26,7 +25,7 @@ const Meals = () => {
           });
       }, []);
 
-      const addToCartHandler = (data: any, i: number) => {
+      // const addToCartHandler = (data: any, i: number) => {
         // let arr: string[] = [...select]
         // select.forEach((str, j, arr) => {
         //   if(i === j)
@@ -35,8 +34,8 @@ const Meals = () => {
         //   console.log(select)
         // });
 
-        
-      }
+
+      // }
 
       // const initial = <button className="flex items-center justify-center justify-between w-[9rem] absolute bottom-[-1rem] right-1/2 translate-x-1/2 z-[10]  p-3 bg-white text-rd border border-rd rounded-full" onClick={() => {addToCartHandler(data)}}>
       // <CartSvg />
@@ -58,12 +57,12 @@ const Meals = () => {
         <div className="w-full height-64 bg-black overflow-hidden border-2 border-rd rounded-lg">
           <Image alt='image' src={data.image.desktop} width={200} height={200} style={{height: 'auto', width: '100%'}}/>
         </div>
-        {i % 2 === 0 ? <button className="flex items-center justify-center justify-between w-[9rem] absolute bottom-[-1rem] right-1/2 translate-x-1/2 z-[10]  p-3 border border-rd rounded-full bg-rd" onClick={() => {addToCartHandler(data, i)}}>
+        {i % 2 === 0 ? <button className="flex items-center justify-center justify-between w-[9rem] absolute bottom-[-1rem] right-1/2 translate-x-1/2 z-[10]  p-3 border border-rd rounded-full bg-rd" onClick={() => {}}>
       <DecrementSvg />
       <p className="font-light">1</p>
       <IncrementSvg />
       </button> :
-      <button className="flex items-center justify-center justify-between w-[9rem] absolute bottom-[-1rem] right-1/2 translate-x-1/2 z-[10]  p-3 bg-white text-rd border border-rd rounded-full" onClick={() => {addToCartHandler(data, i)}}>
+      <button className="flex items-center justify-center justify-between w-[9rem] absolute bottom-[-1rem] right-1/2 translate-x-1/2 z-[10]  p-3 bg-white text-rd border border-rd rounded-full" onClick={() => {}}>
       <CartSvg />
       <p>Add to cart</p>
       </button>
