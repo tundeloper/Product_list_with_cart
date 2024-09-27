@@ -8,8 +8,8 @@ import IncrementSvg from "../SVGS/increment";
 
 const Meals = () => {
     const [data, setData] = useState<{image: {thumbnail: string, mobile: string, tablet: '', desktop: ''}, name: string, price: number, category: string}[]>([]);
-    // const [cart, setCart] = useState<{}[]>([])
-    const [select] = useState<string[]>(['notSelect', '', 'notSelect','notSelect','notSelect','notSelect','notSelect' ,'notSelect', 'notSelect'])
+    const [cart, setCart] = useState<{}[]>([])
+    const [select, setSelect] = useState<string[]>(['notSelect', '', 'notSelect','notSelect','notSelect','notSelect','notSelect' ,'notSelect', 'notSelect'])
     const [loading, setLoading] = useState(true); 
     const [error, setError] = useState(null);
     useEffect(() => {
@@ -26,7 +26,11 @@ const Meals = () => {
       }, []);
 
       const addToCartHandler = (data: any, i: number) => {
-        select[i] = 'select'
+        setSelect((prev) => {
+          const arr = select
+          arr[i] = 'select'
+          return arr
+        })
         // let arr: string[] = [...select]
         // select.forEach((str, j, arr) => {
         //   if(i === j)
