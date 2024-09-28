@@ -11,11 +11,16 @@ type dataType = {
   name: string,
   price: number,
   category: string,
+  qty: number,
 }
 
-const Meals = () => {
+interface MealsProps {
+  sendCartToParent: (data: dataType[]) => void
+}
+
+const Meals : React.FC<MealsProps> = ({sendCartToParent}) => {
     const [data, setData] = useState<{image: {thumbnail: string, mobile: string, tablet: '', desktop: ''}, name: string, price: number, category: string}[]>([]);
-    const [cart, setCart] = useState<{image: {thumbnail: string, mobile: string, tablet: '', desktop: ''}, qty: number, name: string, price: number, category: string}[]>([])
+    const [cart, setCart] = useState<dataType[]>([])
     const [select, setSelect] = useState<string[]>(['notSelect', 'notSelect', 'notSelect','notSelect','notSelect','notSelect','notSelect' ,'notSelect', 'notSelect'])
     const [loading, setLoading] = useState(true); 
     const [error, setError] = useState(null);
@@ -33,8 +38,7 @@ const Meals = () => {
       }, []);
 
       useEffect(() => {
-        console.log(cart)
-        // console.log(select)
+        sendCartToParent(cart)
       }, [cart])
 
       const addToCartHandler = (data: {image: {thumbnail: string, mobile: string, tablet: '', desktop: ''}, name: string, price: number, category: string}, i: number) => {
@@ -110,11 +114,11 @@ const Meals = () => {
       if (error) return <p>Error: {error}</p>;
 
 
-  
+
     return <div className="grid grid-cols-3 gap-4">
       {data.map((data, i) => <div className="w-full text-white flex flex-col font-bold" key={i}>
         <div className="relative w-full">
-        <div className="w-full height-64 bg-black overflow-hidden border-2 border-rd rounded-lg" style={{border: select[i] === 'select' ? '.2rem solid #ca3c18' : 'none'}}>
+        <div className="w-full height-64 bg-black overflow-hidden border-2 border-rd rounded-lg" style={{border: (select[i] === 'select') ? '.2rem solid #ca3c18' : 'none'}}>
           <Image alt='image' src={data.image.desktop} width={200} height={200} style={{height: 'auto', width: '100%'}}/>
         </div>
         {select[i] === 'select' ? <button className="flex items-center justify-center justify-between w-[9rem] absolute bottom-[-1rem] right-1/2 translate-x-1/2 z-[10]  p-3 border border-rd rounded-full bg-rd">
