@@ -2,6 +2,7 @@ import NoCart from './components/noCart'
 import Meals from "./components/allMeals";
 
 export default function Home() {
+
   return (
     <div className="flex items-start bg-background p-8 pb-20 gap-10 sm:p-10 font-[family-name:var(--font-geist-sans)]">
      <div className="bg-red h-full w-4/5">
