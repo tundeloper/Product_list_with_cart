@@ -1,5 +1,5 @@
 'use client'
-import { CartContext } from "../api/store/context";
+import { CartContext } from "../store/context";
 import RemoveItem from "../SVGS/removeItem";
 import NoCart from "./noCart"
 import { useContext, useEffect, useState } from "react";

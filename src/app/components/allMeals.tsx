@@ -5,7 +5,7 @@ import Image from "next/image";
 import CartSvg from "../SVGS/cart";
 import DecrementSvg from "../SVGS/decrement";
 import IncrementSvg from "../SVGS/increment";
-import { CartContext } from "../api/store/context";
+import { CartContext } from "../store/context";
 
 type dataType = {
   image: {thumbnail: string, mobile: string, tablet: string, desktop: string},

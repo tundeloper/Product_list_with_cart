@@ -3,7 +3,8 @@ import { useContext, useEffect } from "react";
 import Meals from "./components/allMeals";
 import Cart from './components/cart';
 import NoCart from "./components/noCart";
-import CartContextProvider, { CartContext } from "./api/store/context";
+import CartContextProvider, { CartContext } from "./store/context";
+import CartModal from "./components/showcartModal";
 
 export default function Home() {
  
@@ -15,10 +16,7 @@ export default function Home() {
      <Meals />
      </div>
 
-     <div className="bg-white h-auto w-2/5 p-5 mr-8 mb-4">
-     <h1 className="text-ds font-bold text-rd">Your cart ({contex.cart.length})</h1>
-     {contex.cart.length > 0 ? <Cart /> : <NoCart />}
-     </div>
+     <CartModal />
     </div>
     </CartContextProvider>
   );
