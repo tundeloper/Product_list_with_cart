@@ -55,7 +55,7 @@ const Meals: React.FC = () => {
           <div className="mb-4 w-full sm:mb-0 text-white flex flex-col font-bold" key={i}>
             <div className="relative w-full">
               <div
-                className={`w-full h-64 bg-black overflow-hidden border-2 border-rd rounded-lg ${
+                className={`w-full h-64 bg-black overflow-hidden border-rd rounded-lg ${
                   isSelected ? "border-[.2rem] border-rd" : ""
                 }`}
               >
