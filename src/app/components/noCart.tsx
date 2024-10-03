@@ -1,11 +1,18 @@
 import React from "react";
 import EmptyCart from "../SVGS/empty";
 
-const NoCart = () => {
-    return <div className="flex flex-col items-center justify-center p-5">
-        <EmptyCart />
-        <p className="text-sm font-light text-lightdk">your added items will apear here</p>
-   </div>
-}
+const NoCart: React.FC = () => {
+  return (
+    <div className="flex flex-col items-center justify-center p-5">
+      {/* Empty cart illustration */}
+      <EmptyCart aria-label="Empty cart illustration" />
 
-export default NoCart
+      {/* Informative message */}
+      <p className="text-sm font-light text-lightdk">
+        Your added items will appear here
+      </p>
+    </div>
+  );
+};
+
+export default NoCart;
