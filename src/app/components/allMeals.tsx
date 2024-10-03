@@ -46,13 +46,13 @@ const Meals : React.FC = () => {
           <Image alt='image' src={w > 640 ? data.image.desktop: data.image.mobile} width={200} height={200} style={{height: 'auto', width: '100%'}}/>
         </div>
         {context.select[i] === 'select' ? <button className="flex items-center justify-center justify-between w-[9rem] absolute bottom-[-1rem] right-1/2 translate-x-1/2 z-[10]  p-3 border border-rd rounded-full bg-rd">
-      <DecrementSvg handleClick={() => {context.minusCartQty(data, i)}}/>
+      <DecrementSvg handleClick={() => {context.minusCartQty({...data, qty: 0}, i)}}/>
       <p className="font-light">
         {cart.length > 0 && cart[cart.findIndex(cart => cart.name === data.name)]?.qty}
       </p>
-      <IncrementSvg handleClick={() => {context.addCartQty(data, i)}}/>
+      <IncrementSvg handleClick={() => {context.addCartQty({...data, qty: 0}, i)}}/>
       </button> :
-      <button className="flex items-center justify-center justify-between w-[9rem] absolute bottom-[-1rem] right-1/2 translate-x-1/2 z-[10]  p-3 bg-white text-rd border border-rd rounded-full" onClick={() => {context.addToCart(data, i)}}>
+      <button className="flex items-center justify-center justify-between w-[9rem] absolute bottom-[-1rem] right-1/2 translate-x-1/2 z-[10]  p-3 bg-white text-rd border border-rd rounded-full" onClick={() => {context.addToCart({...data, qty:0}, i)}}>
       <CartSvg />
       <p>Add to cart</p>
       </button>

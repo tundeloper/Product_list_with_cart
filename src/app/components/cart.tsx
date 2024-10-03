@@ -28,7 +28,7 @@ const Cart : React.FC = () => {
             <CarbonNeutral />
             <p className="font-light">This is a <span className="font-bold">carbon-neutral</span> delivery</p>
         </div>
-        <button className="bg-red-500 text-white flex justify-center items-center w-full p-3 rounded-full text-center mt-4 font-bold"  onClick={() => {context.submitHnadler(true)}}>Confirm Order</button>
+        <button className="bg-red-500 text-white flex justify-center items-center w-full p-3 rounded-full text-center mt-4 font-bold"  onClick={() => {context.submitHandler(true)}}>Confirm Order</button>
     </div>
     
 }

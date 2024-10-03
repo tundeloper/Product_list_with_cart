@@ -14,7 +14,7 @@ const ConfirmCart : React.FC = ()  => {
     }
 
     if(contex.isSubmit){
-    return <div className="fixed inset-0 flex h-screen items-center justify-center bg-black bg-opacity-80 z-[999] text-black" onClick={() => {contex.submitHnadler(false)}}>
+    return <div className="fixed inset-0 flex h-screen items-center justify-center bg-black bg-opacity-80 z-[999] text-black" onClick={() => {contex.submitHandler(false)}}>
         <div className="bg-white w-[25rem] rounded-[2%]">
             <div className="p-3">
                 <IconConfirm />
