@@ -16,6 +16,7 @@ const config: Config = {
         background: '#fcf8f5',
         dk: "#230a06",
         rd: "#ca3c18",
+        lrd: "#fcf8f5",
       },
     },
   },

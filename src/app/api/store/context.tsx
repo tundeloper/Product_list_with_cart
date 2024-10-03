@@ -59,7 +59,13 @@ const CartContextProvider : React.FC<{children: ReactNode}> = ({children}) => {
     })    
   };
 
-  const removeFromCart = () => {}
+  const removeFromCart = (val: dataType, i: number) => {
+    setCart((prev) => {
+      const allCarts = [...prev]
+      allCarts.splice(i, 1)
+      return allCarts
+    })
+  }
 
   const addCartQty = (val: dataType, i: number) => {
     const index = cart.findIndex(cart => cart.name === val.name)
@@ -77,7 +83,6 @@ const CartContextProvider : React.FC<{children: ReactNode}> = ({children}) => {
   }
 
   const minusCartQty = (val: {image: {thumbnail: string, mobile: string, tablet: '', desktop: ''}, name: string, price: number, category: string}, i: number) => {
-    // console.log(cart)
     const index = cart.findIndex(cart => cart.name === val.name)
     setCart((prev) => {
       const allcarts = [...prev]
