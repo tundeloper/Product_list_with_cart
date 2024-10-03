@@ -2,13 +2,13 @@
 import { CartContext } from "../api/store/context";
 import CarbonNeutral from "../SVGS/carbonNeutral";
 import RemoveItem from "../SVGS/removeItem";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 
 const Cart : React.FC = () => {
     const context = useContext(CartContext)
     const total = context.cart.reduce((total, item) =>total + (item.price * item.qty), 0)
 
-    return <div className="flex flex-col font-bold">
+    return <div className="flex flex-col font-bold" onClick={() => {console.log('clicked')}}>
         {context.cart.map((val, i) => {
             return <div className="flex justify-between items-center mb-2" key={val.name}>
                 <div>
@@ -27,7 +27,7 @@ const Cart : React.FC = () => {
             <CarbonNeutral />
             <p className="font-light">This is a <span className="font-bold">carbon-neutral</span> delivery</p>
         </div>
-        <button className="flex text-white bg-rd mt-4 p-3 text-center rounded-70">Confirm Order</button>
+        <button className="flex text-white bg-rd mt-4 p-3 text-center rounded-70" onClick={() => {context.submitHnadler(true)}}>Confirm Order</button>
     </div>
     
 }

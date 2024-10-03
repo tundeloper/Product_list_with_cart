@@ -16,7 +16,7 @@ export default function Home() {
 
      <CartModal />
     </div>
-    {/* <ConfirmCart /> */}
+    <ConfirmCart />
     </CartContextProvider>
   );
 }

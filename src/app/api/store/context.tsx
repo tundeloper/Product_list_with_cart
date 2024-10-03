@@ -11,19 +11,23 @@ type dataType = {
   type dataObject = {
     cart: dataType[],
     select: string[],
+    isSubmit: boolean,
     addToCart: Function,
     removeFromCart: Function,
     minusCartQty: Function,
     addCartQty: Function,
+    submitHnadler: Function,
   }
 
 const initialState: dataObject = {
     cart: [],
     select: ['notSelect', 'notSelect', 'notSelect','notSelect','notSelect','notSelect','notSelect' ,'notSelect', 'notSelect'],
+    isSubmit: false,
     addToCart: (val: dataType[], i: number) => {},
     removeFromCart: () => {},
     minusCartQty: (val:dataType, i:number) => {},
-    addCartQty: (val:dataType, i:number) => {}
+    addCartQty: (val:dataType, i:number) => {},
+    submitHnadler: (prev: boolean) => {}
 }
 
 export const CartContext = React.createContext(initialState); // default value 
@@ -32,6 +36,7 @@ const CartContextProvider : React.FC<{children: ReactNode}> = ({children}) => {
 
 
   const [cart, setCart] = useState<dataType[]>([]);
+  const [isSubmit, setisSubmit] = useState<boolean>(false);
   const [select, setSelect] = useState(['notSelect', 'notSelect', 'notSelect','notSelect','notSelect','notSelect','notSelect' ,'notSelect', 'notSelect']);
 
   const addToCart = (val: dataType, i: number) => {
@@ -108,13 +113,19 @@ const CartContextProvider : React.FC<{children: ReactNode}> = ({children}) => {
     })
   }
 
+  const submitHnadler = (val : boolean) => {
+    setisSubmit(val)
+  }
+
   const cartValue = {
     cart,
     select: select,
+    isSubmit,
     addToCart: addToCart,
     removeFromCart,
     minusCartQty,
-    addCartQty
+    addCartQty,
+    submitHnadler,
   };
 
   return (
