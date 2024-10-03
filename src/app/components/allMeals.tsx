@@ -40,16 +40,18 @@ const Meals : React.FC = () => {
       if (error) return <p>Error: {error}</p>;
 
     return <div className="grid-cols-1 sm:grid sm:grid-cols-3 sm:gap-4">
-      {data.map((meals, i) => <div className="mb-4 w-full sm:mb-0 text-white flex flex-col font-bold" key={i}>
+      {data.map((meals, i) => {
+        const cartItemIndex = cart.findIndex((cartItem) => cartItem.name === meals.name);
+        const quantity = cartItemIndex > -1 ? cart[cartItemIndex].qty : 0;
+        
+        return <div className="mb-4 w-full sm:mb-0 text-white flex flex-col font-bold" key={i}>
         <div className="relative w-full">
         <div className="w-full height-64 bg-black overflow-hidden border-2 border-rd rounded-lg" style={{border: (context.select[i] === 'select') ? '.2rem solid #ca3c18' : 'none'}}>
           <Image alt='image' src={w > 640 ? meals.image.desktop: meals.image.mobile} width={200} height={200} style={{height: 'auto', width: '100%'}}/>
         </div>
         {context.select[i] === 'select' ? <button className="flex items-center justify-center justify-between w-[9rem] absolute bottom-[-1rem] right-1/2 translate-x-1/2 z-[10]  p-3 border border-rd rounded-full bg-rd">
       <DecrementSvg handleClick={() => {context.minusCartQty({...meals, qty: 0}, i)}}/>
-      <p className="font-light">
-        {cart.length > 0 && cart[cart.findIndex(cart => cart.name === meals.name)]?.qty}
-      </p>
+      <p className="font-light">{quantity}</p>
       <IncrementSvg handleClick={() => {context.addCartQty({...meals, qty: 0}, i)}}/>
       </button> :
       <button className="flex items-center justify-center justify-between w-[9rem] absolute bottom-[-1rem] right-1/2 translate-x-1/2 z-[10]  p-3 bg-white text-rd border border-rd rounded-full" onClick={() => {context.addToCart({...meals, qty:0}, i)}}>
@@ -65,7 +67,8 @@ const Meals : React.FC = () => {
           <p className="text-black">{meals.name}</p>
           <p className="text-rd">${meals.price.toFixed(2)}</p>
         </div>
-        </div>)}
+        </div>
+      } )}
     </div>
 
 }
