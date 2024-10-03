@@ -1,0 +1,526 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Users\aleem\AppData\Roaming\npm\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.1.0
+2 info using node@v18.17.1
+3 timing npm:load:whichnode Completed in 3ms
+4 timing config:load:defaults Completed in 13ms
+5 timing config:load:file:C:\Users\aleem\AppData\Roaming\npm\node_modules\npm\npmrc Completed in 5ms
+6 timing config:load:builtin Completed in 6ms
+7 timing config:load:cli Completed in 6ms
+8 timing config:load:env Completed in 2ms
+9 timing config:load:file:C:\Users\aleem\OneDrive\Documents\product_list_with_cart\.npmrc Completed in 1ms
+10 timing config:load:project Completed in 6ms
+11 timing config:load:file:C:\Users\aleem\.npmrc Completed in 1ms
+12 timing config:load:user Completed in 2ms
+13 timing config:load:file:C:\Users\aleem\AppData\Roaming\npm\etc\npmrc Completed in 0ms
+14 timing config:load:global Completed in 0ms
+15 timing config:load:setEnvs Completed in 2ms
+16 timing config:load Completed in 38ms
+17 timing npm:load:configload Completed in 39ms
+18 timing config:load:flatten Completed in 7ms
+19 timing npm:load:mkdirpcache Completed in 3ms
+20 timing npm:load:mkdirplogs Completed in 3ms
+21 verbose title npm install
+22 verbose argv "install" "--cache" ".npm"
+23 timing npm:load:setTitle Completed in 3ms
+24 timing npm:load:display Completed in 2ms
+25 verbose logfile logs-max:10 dir:C:\Users\aleem\OneDrive\Documents\product_list_with_cart\.npm\_logs\2024-10-03T15_08_44_147Z-
+26 verbose logfile C:\Users\aleem\OneDrive\Documents\product_list_with_cart\.npm\_logs\2024-10-03T15_08_44_147Z-debug-0.log
+27 timing npm:load:logFile Completed in 32ms
+28 timing npm:load:timers Completed in 0ms
+29 timing npm:load:configScope Completed in 0ms
+30 timing npm:load Completed in 152ms
+31 timing arborist:ctor Completed in 3ms
+32 silly logfile done cleaning log files
+33 timing idealTree:init Completed in 1751ms
+34 timing idealTree:userRequests Completed in 0ms
+35 silly idealTree buildDeps
+36 timing idealTree:#root Completed in 1ms
+37 timing idealTree:buildDeps Completed in 5ms
+38 timing idealTree:fixDepFlags Completed in 0ms
+39 warn EBADENGINE Unsupported engine {
+39 warn EBADENGINE   package: '@typescript-eslint/eslint-plugin@8.6.0',
+39 warn EBADENGINE   required: { node: '^18.18.0 || ^20.9.0 || >=21.1.0' },
+39 warn EBADENGINE   current: { node: 'v18.17.1', npm: '10.1.0' }
+39 warn EBADENGINE }
+40 warn EBADENGINE Unsupported engine {
+40 warn EBADENGINE   package: '@typescript-eslint/parser@8.6.0',
+40 warn EBADENGINE   required: { node: '^18.18.0 || ^20.9.0 || >=21.1.0' },
+40 warn EBADENGINE   current: { node: 'v18.17.1', npm: '10.1.0' }
+40 warn EBADENGINE }
+41 warn EBADENGINE Unsupported engine {
+41 warn EBADENGINE   package: '@typescript-eslint/scope-manager@8.6.0',
+41 warn EBADENGINE   required: { node: '^18.18.0 || ^20.9.0 || >=21.1.0' },
+41 warn EBADENGINE   current: { node: 'v18.17.1', npm: '10.1.0' }
+41 warn EBADENGINE }
+42 warn EBADENGINE Unsupported engine {
+42 warn EBADENGINE   package: '@typescript-eslint/type-utils@8.6.0',
+42 warn EBADENGINE   required: { node: '^18.18.0 || ^20.9.0 || >=21.1.0' },
+42 warn EBADENGINE   current: { node: 'v18.17.1', npm: '10.1.0' }
+42 warn EBADENGINE }
+43 warn EBADENGINE Unsupported engine {
+43 warn EBADENGINE   package: '@typescript-eslint/types@8.6.0',
+43 warn EBADENGINE   required: { node: '^18.18.0 || ^20.9.0 || >=21.1.0' },
+43 warn EBADENGINE   current: { node: 'v18.17.1', npm: '10.1.0' }
+43 warn EBADENGINE }
+44 warn EBADENGINE Unsupported engine {
+44 warn EBADENGINE   package: '@typescript-eslint/typescript-estree@8.6.0',
+44 warn EBADENGINE   required: { node: '^18.18.0 || ^20.9.0 || >=21.1.0' },
+44 warn EBADENGINE   current: { node: 'v18.17.1', npm: '10.1.0' }
+44 warn EBADENGINE }
+45 warn EBADENGINE Unsupported engine {
+45 warn EBADENGINE   package: '@typescript-eslint/utils@8.6.0',
+45 warn EBADENGINE   required: { node: '^18.18.0 || ^20.9.0 || >=21.1.0' },
+45 warn EBADENGINE   current: { node: 'v18.17.1', npm: '10.1.0' }
+45 warn EBADENGINE }
+46 warn EBADENGINE Unsupported engine {
+46 warn EBADENGINE   package: '@typescript-eslint/visitor-keys@8.6.0',
+46 warn EBADENGINE   required: { node: '^18.18.0 || ^20.9.0 || >=21.1.0' },
+46 warn EBADENGINE   current: { node: 'v18.17.1', npm: '10.1.0' }
+46 warn EBADENGINE }
+47 timing idealTree Completed in 2292ms
+48 timing arborist:ctor Completed in 3ms
+49 timing reify:loadTrees Completed in 2651ms
+50 timing reify:diffTrees Completed in 109ms
+51 silly reify moves {}
+52 timing reify:retireShallow Completed in 1ms
+53 timing reify:createSparse Completed in 46ms
+54 timing reify:loadBundles Completed in 0ms
+55 silly audit bulk request {
+55 silly audit   '@alloc/quick-lru': [ '5.2.0' ],
+55 silly audit   '@emotion/is-prop-valid': [ '1.2.2' ],
+55 silly audit   '@emotion/memoize': [ '0.8.1' ],
+55 silly audit   '@emotion/unitless': [ '0.8.1' ],
+55 silly audit   '@eslint-community/eslint-utils': [ '4.4.0' ],
+55 silly audit   '@eslint-community/regexpp': [ '4.11.1' ],
+55 silly audit   '@eslint/eslintrc': [ '2.1.4' ],
+55 silly audit   '@eslint/js': [ '8.57.1' ],
+55 silly audit   '@humanwhocodes/config-array': [ '0.13.0' ],
+55 silly audit   '@humanwhocodes/module-importer': [ '1.0.1' ],
+55 silly audit   '@humanwhocodes/object-schema': [ '2.0.3' ],
+55 silly audit   '@isaacs/cliui': [ '8.0.2' ],
+55 silly audit   'ansi-regex': [ '6.1.0', '5.0.1' ],
+55 silly audit   'strip-ansi': [ '7.1.0', '6.0.1' ],
+55 silly audit   '@jridgewell/gen-mapping': [ '0.3.5' ],
+55 silly audit   '@jridgewell/resolve-uri': [ '3.1.2' ],
+55 silly audit   '@jridgewell/set-array': [ '1.2.1' ],
+55 silly audit   '@jridgewell/sourcemap-codec': [ '1.5.0' ],
+55 silly audit   '@jridgewell/trace-mapping': [ '0.3.25' ],
+55 silly audit   '@next/env': [ '14.2.13' ],
+55 silly audit   '@next/eslint-plugin-next': [ '14.2.13' ],
+55 silly audit   '@next/swc-darwin-arm64': [ '14.2.13' ],
+55 silly audit   '@next/swc-darwin-x64': [ '14.2.13' ],
+55 silly audit   '@next/swc-linux-arm64-gnu': [ '14.2.13' ],
+55 silly audit   '@next/swc-linux-arm64-musl': [ '14.2.13' ],
+55 silly audit   '@next/swc-linux-x64-gnu': [ '14.2.13' ],
+55 silly audit   '@next/swc-linux-x64-musl': [ '14.2.13' ],
+55 silly audit   '@next/swc-win32-arm64-msvc': [ '14.2.13' ],
+55 silly audit   '@next/swc-win32-ia32-msvc': [ '14.2.13' ],
+55 silly audit   '@next/swc-win32-x64-msvc': [ '14.2.13' ],
+55 silly audit   '@nodelib/fs.scandir': [ '2.1.5' ],
+55 silly audit   '@nodelib/fs.stat': [ '2.0.5' ],
+55 silly audit   '@nodelib/fs.walk': [ '1.2.8' ],
+55 silly audit   '@nolyfill/is-core-module': [ '1.0.39' ],
+55 silly audit   '@pkgjs/parseargs': [ '0.11.0' ],
+55 silly audit   '@rtsao/scc': [ '1.1.0' ],
+55 silly audit   '@rushstack/eslint-patch': [ '1.10.4' ],
+55 silly audit   '@swc/counter': [ '0.1.3' ],
+55 silly audit   '@swc/helpers': [ '0.5.5' ],
+55 silly audit   '@types/json5': [ '0.0.29' ],
+55 silly audit   '@types/node': [ '20.16.5' ],
+55 silly audit   '@types/prop-types': [ '15.7.13' ],
+55 silly audit   '@types/react': [ '18.3.8' ],
+55 silly audit   '@types/react-dom': [ '18.3.0' ],
+55 silly audit   '@types/stylis': [ '4.2.5' ],
+55 silly audit   '@typescript-eslint/eslint-plugin': [ '8.6.0' ],
+55 silly audit   '@typescript-eslint/parser': [ '8.6.0' ],
+55 silly audit   '@typescript-eslint/scope-manager': [ '8.6.0' ],
+55 silly audit   '@typescript-eslint/type-utils': [ '8.6.0' ],
+55 silly audit   '@typescript-eslint/types': [ '8.6.0' ],
+55 silly audit   '@typescript-eslint/typescript-estree': [ '8.6.0' ],
+55 silly audit   'brace-expansion': [ '2.0.1', '1.1.11' ],
+55 silly audit   minimatch: [ '9.0.5', '3.1.2' ],
+55 silly audit   '@typescript-eslint/utils': [ '8.6.0' ],
+55 silly audit   '@typescript-eslint/visitor-keys': [ '8.6.0' ],
+55 silly audit   '@ungap/structured-clone': [ '1.2.0' ],
+55 silly audit   acorn: [ '8.12.1' ],
+55 silly audit   'acorn-jsx': [ '5.3.2' ],
+55 silly audit   ajv: [ '6.12.6' ],
+55 silly audit   'ansi-styles': [ '4.3.0', '6.2.1' ],
+55 silly audit   'any-promise': [ '1.3.0' ],
+55 silly audit   anymatch: [ '3.1.3' ],
+55 silly audit   arg: [ '5.0.2' ],
+55 silly audit   argparse: [ '2.0.1' ],
+55 silly audit   'aria-query': [ '5.1.3' ],
+55 silly audit   'array-buffer-byte-length': [ '1.0.1' ],
+55 silly audit   'array-includes': [ '3.1.8' ],
+55 silly audit   'array.prototype.findlast': [ '1.2.5' ],
+55 silly audit   'array.prototype.findlastindex': [ '1.2.5' ],
+55 silly audit   'array.prototype.flat': [ '1.3.2' ],
+55 silly audit   'array.prototype.flatmap': [ '1.3.2' ],
+55 silly audit   'array.prototype.tosorted': [ '1.1.4' ],
+55 silly audit   'arraybuffer.prototype.slice': [ '1.0.3' ],
+55 silly audit   'ast-types-flow': [ '0.0.8' ],
+55 silly audit   asynckit: [ '0.4.0' ],
+55 silly audit   'available-typed-arrays': [ '1.0.7' ],
+55 silly audit   'axe-core': [ '4.10.0' ],
+55 silly audit   axios: [ '1.7.7' ],
+55 silly audit   'axobject-query': [ '4.1.0' ],
+55 silly audit   'balanced-match': [ '1.0.2' ],
+55 silly audit   'binary-extensions': [ '2.3.0' ],
+55 silly audit   braces: [ '3.0.3' ],
+55 silly audit   busboy: [ '1.6.0' ],
+55 silly audit   'call-bind': [ '1.0.7' ],
+55 silly audit   callsites: [ '3.1.0' ],
+55 silly audit   'camelcase-css': [ '2.0.1' ],
+55 silly audit   camelize: [ '1.0.1' ],
+55 silly audit   'caniuse-lite': [ '1.0.30001662' ],
+55 silly audit   chalk: [ '4.1.2' ],
+55 silly audit   chokidar: [ '3.6.0' ],
+55 silly audit   'glob-parent': [ '5.1.2', '6.0.2' ],
+55 silly audit   'client-only': [ '0.0.1' ],
+55 silly audit   'color-convert': [ '2.0.1' ],
+55 silly audit   'color-name': [ '1.1.4' ],
+55 silly audit   'combined-stream': [ '1.0.8' ],
+55 silly audit   commander: [ '4.1.1' ],
+55 silly audit   'concat-map': [ '0.0.1' ],
+55 silly audit   'cross-spawn': [ '7.0.3' ],
+55 silly audit   'css-color-keywords': [ '1.0.0' ],
+55 silly audit   'css-to-react-native': [ '3.2.0' ],
+55 silly audit   cssesc: [ '3.0.0' ],
+55 silly audit   csstype: [ '3.1.3' ],
+55 silly audit   'damerau-levenshtein': [ '1.0.8' ],
+55 silly audit   'data-view-buffer': [ '1.0.1' ],
+55 silly audit   'data-view-byte-length': [ '1.0.1' ],
+55 silly audit   'data-view-byte-offset': [ '1.0.0' ],
+55 silly audit   debug: [ '4.3.7', '3.2.7' ],
+55 silly audit   'deep-equal': [ '2.2.3' ],
+55 silly audit   'deep-is': [ '0.1.4' ],
+55 silly audit   'define-data-property': [ '1.1.4' ],
+55 silly audit   'define-properties': [ '1.2.1' ],
+55 silly audit   'delayed-stream': [ '1.0.0' ],
+55 silly audit   didyoumean: [ '1.2.2' ],
+55 silly audit   dlv: [ '1.1.3' ],
+55 silly audit   doctrine: [ '3.0.0', '2.1.0' ],
+55 silly audit   eastasianwidth: [ '0.2.0' ],
+55 silly audit   'emoji-regex': [ '9.2.2', '8.0.0' ],
+55 silly audit   'enhanced-resolve': [ '5.17.1' ],
+55 silly audit   'es-abstract': [ '1.23.3' ],
+55 silly audit   'es-define-property': [ '1.0.0' ],
+55 silly audit   'es-errors': [ '1.3.0' ],
+55 silly audit   'es-get-iterator': [ '1.1.3' ],
+55 silly audit   'es-iterator-helpers': [ '1.0.19' ],
+55 silly audit   'es-object-atoms': [ '1.0.0' ],
+55 silly audit   'es-set-tostringtag': [ '2.0.3' ],
+55 silly audit   'es-shim-unscopables': [ '1.0.2' ],
+55 silly audit   'es-to-primitive': [ '1.2.1' ],
+55 silly audit   'escape-string-regexp': [ '4.0.0' ],
+55 silly audit   eslint: [ '8.57.1' ],
+55 silly audit   'eslint-config-next': [ '14.2.13' ],
+55 silly audit   'eslint-import-resolver-node': [ '0.3.9' ],
+55 silly audit   'eslint-import-resolver-typescript': [ '3.6.3' ],
+55 silly audit   'eslint-module-utils': [ '2.11.0' ],
+55 silly audit   'eslint-plugin-import': [ '2.30.0' ],
+55 silly audit   semver: [ '6.3.1', '7.6.3' ],
+55 silly audit   'eslint-plugin-jsx-a11y': [ '6.10.0' ],
+55 silly audit   'eslint-plugin-react': [ '7.36.1' ],
+55 silly audit   'eslint-plugin-react-hooks': [ '4.6.2' ],
+55 silly audit   resolve: [ '2.0.0-next.5', '1.22.8' ],
+55 silly audit   'eslint-scope': [ '7.2.2' ],
+55 silly audit   'eslint-visitor-keys': [ '3.4.3' ],
+55 silly audit   espree: [ '9.6.1' ],
+55 silly audit   esquery: [ '1.6.0' ],
+55 silly audit   esrecurse: [ '4.3.0' ],
+55 silly audit   estraverse: [ '5.3.0' ],
+55 silly audit   esutils: [ '2.0.3' ],
+55 silly audit   'fast-deep-equal': [ '3.1.3' ],
+55 silly audit   'fast-glob': [ '3.3.2' ],
+55 silly audit   'fast-json-stable-stringify': [ '2.1.0' ],
+55 silly audit   'fast-levenshtein': [ '2.0.6' ],
+55 silly audit   fastq: [ '1.17.1' ],
+55 silly audit   'file-entry-cache': [ '6.0.1' ],
+55 silly audit   'fill-range': [ '7.1.1' ],
+55 silly audit   'find-up': [ '5.0.0' ],
+55 silly audit   'flat-cache': [ '3.2.0' ],
+55 silly audit   flatted: [ '3.3.1' ],
+55 silly audit   'follow-redirects': [ '1.15.9' ],
+55 silly audit   'for-each': [ '0.3.3' ],
+55 silly audit   'foreground-child': [ '3.3.0' ],
+55 silly audit   'form-data': [ '4.0.0' ],
+55 silly audit   'fs.realpath': [ '1.0.0' ],
+55 silly audit   fsevents: [ '2.3.3' ],
+55 silly audit   'function-bind': [ '1.1.2' ],
+55 silly audit   'function.prototype.name': [ '1.1.6' ],
+55 silly audit   'functions-have-names': [ '1.2.3' ],
+55 silly audit   'get-intrinsic': [ '1.2.4' ],
+55 silly audit   'get-symbol-description': [ '1.0.2' ],
+55 silly audit   'get-tsconfig': [ '4.8.1' ],
+55 silly audit   glob: [ '10.3.10', '7.2.3' ],
+55 silly audit   globals: [ '13.24.0' ],
+55 silly audit   globalthis: [ '1.0.4' ],
+55 silly audit   gopd: [ '1.0.1' ],
+55 silly audit   'graceful-fs': [ '4.2.11' ],
+55 silly audit   graphemer: [ '1.4.0' ],
+55 silly audit   'has-bigints': [ '1.0.2' ],
+55 silly audit   'has-flag': [ '4.0.0' ],
+55 silly audit   'has-property-descriptors': [ '1.0.2' ],
+55 silly audit   'has-proto': [ '1.0.3' ],
+55 silly audit   'has-symbols': [ '1.0.3' ],
+55 silly audit   'has-tostringtag': [ '1.0.2' ],
+55 silly audit   hasown: [ '2.0.2' ],
+55 silly audit   ignore: [ '5.3.2' ],
+55 silly audit   'import-fresh': [ '3.3.0' ],
+55 silly audit   imurmurhash: [ '0.1.4' ],
+55 silly audit   inflight: [ '1.0.6' ],
+55 silly audit   inherits: [ '2.0.4' ],
+55 silly audit   'internal-slot': [ '1.0.7' ],
+55 silly audit   'is-arguments': [ '1.1.1' ],
+55 silly audit   'is-array-buffer': [ '3.0.4' ],
+55 silly audit   'is-async-function': [ '2.0.0' ],
+55 silly audit   'is-bigint': [ '1.0.4' ],
+55 silly audit   'is-binary-path': [ '2.1.0' ],
+55 silly audit   'is-boolean-object': [ '1.1.2' ],
+55 silly audit   'is-bun-module': [ '1.2.1' ],
+55 silly audit   'is-callable': [ '1.2.7' ],
+55 silly audit   'is-core-module': [ '2.15.1' ],
+55 silly audit   'is-data-view': [ '1.0.1' ],
+55 silly audit   'is-date-object': [ '1.0.5' ],
+55 silly audit   'is-extglob': [ '2.1.1' ],
+55 silly audit   'is-finalizationregistry': [ '1.0.2' ],
+55 silly audit   'is-fullwidth-code-point': [ '3.0.0' ],
+55 silly audit   'is-generator-function': [ '1.0.10' ],
+55 silly audit   'is-glob': [ '4.0.3' ],
+55 silly audit   'is-map': [ '2.0.3' ],
+55 silly audit   'is-negative-zero': [ '2.0.3' ],
+55 silly audit   'is-number': [ '7.0.0' ],
+55 silly audit   'is-number-object': [ '1.0.7' ],
+55 silly audit   'is-path-inside': [ '3.0.3' ],
+55 silly audit   'is-regex': [ '1.1.4' ],
+55 silly audit   'is-set': [ '2.0.3' ],
+55 silly audit   'is-shared-array-buffer': [ '1.0.3' ],
+55 silly audit   'is-string': [ '1.0.7' ],
+55 silly audit   'is-symbol': [ '1.0.4' ],
+55 silly audit   'is-typed-array': [ '1.1.13' ],
+55 silly audit   'is-weakmap': [ '2.0.2' ],
+55 silly audit   'is-weakref': [ '1.0.2' ],
+55 silly audit   'is-weakset': [ '2.0.3' ],
+55 silly audit   isarray: [ '2.0.5' ],
+55 silly audit   isexe: [ '2.0.0' ],
+55 silly audit   'iterator.prototype': [ '1.1.2' ],
+55 silly audit   jackspeak: [ '2.3.6' ],
+55 silly audit   jiti: [ '1.21.6' ],
+55 silly audit   'js-tokens': [ '4.0.0' ],
+55 silly audit   'js-yaml': [ '4.1.0' ],
+55 silly audit   'json-buffer': [ '3.0.1' ],
+55 silly audit   'json-schema-traverse': [ '0.4.1' ],
+55 silly audit   'json-stable-stringify-without-jsonify': [ '1.0.1' ],
+55 silly audit   json5: [ '1.0.2' ],
+55 silly audit   'jsx-ast-utils': [ '3.3.5' ],
+55 silly audit   keyv: [ '4.5.4' ],
+55 silly audit   'language-subtag-registry': [ '0.3.23' ],
+55 silly audit   'language-tags': [ '1.0.9' ],
+55 silly audit   levn: [ '0.4.1' ],
+55 silly audit   lilconfig: [ '2.1.0', '3.1.2' ],
+55 silly audit   'lines-and-columns': [ '1.2.4' ],
+55 silly audit   'locate-path': [ '6.0.0' ],
+55 silly audit   'lodash.merge': [ '4.6.2' ],
+55 silly audit   'loose-envify': [ '1.4.0' ],
+55 silly audit   'lru-cache': [ '10.4.3' ],
+55 silly audit   merge2: [ '1.4.1' ],
+55 silly audit   micromatch: [ '4.0.8' ],
+55 silly audit   'mime-db': [ '1.52.0' ],
+55 silly audit   'mime-types': [ '2.1.35' ],
+55 silly audit   minimist: [ '1.2.8' ],
+55 silly audit   minipass: [ '7.1.2' ],
+55 silly audit   ms: [ '2.1.3' ],
+55 silly audit   mz: [ '2.7.0' ],
+55 silly audit   nanoid: [ '3.3.7' ],
+55 silly audit   'natural-compare': [ '1.4.0' ],
+55 silly audit   next: [ '14.2.13' ],
+55 silly audit   postcss: [ '8.4.31', '8.4.47', '8.4.38' ],
+55 silly audit   'normalize-path': [ '3.0.0' ],
+55 silly audit   'object-assign': [ '4.1.1' ],
+55 silly audit   'object-hash': [ '3.0.0' ],
+55 silly audit   'object-inspect': [ '1.13.2' ],
+55 silly audit   'object-is': [ '1.1.6' ],
+55 silly audit   'object-keys': [ '1.1.1' ],
+55 silly audit   'object.assign': [ '4.1.5' ],
+55 silly audit   'object.entries': [ '1.1.8' ],
+55 silly audit   'object.fromentries': [ '2.0.8' ],
+55 silly audit   'object.groupby': [ '1.0.3' ],
+55 silly audit   'object.values': [ '1.2.0' ],
+55 silly audit   once: [ '1.4.0' ],
+55 silly audit   optionator: [ '0.9.4' ],
+55 silly audit   'p-limit': [ '3.1.0' ],
+55 silly audit   'p-locate': [ '5.0.0' ],
+55 silly audit   'parent-module': [ '1.0.1' ],
+55 silly audit   'path-exists': [ '4.0.0' ],
+55 silly audit   'path-is-absolute': [ '1.0.1' ],
+55 silly audit   'path-key': [ '3.1.1' ],
+55 silly audit   'path-parse': [ '1.0.7' ],
+55 silly audit   'path-scurry': [ '1.11.1' ],
+55 silly audit   picocolors: [ '1.1.0' ],
+55 silly audit   picomatch: [ '2.3.1' ],
+55 silly audit   pify: [ '2.3.0' ],
+55 silly audit   pirates: [ '4.0.6' ],
+55 silly audit   'possible-typed-array-names': [ '1.0.0' ],
+55 silly audit   'postcss-import': [ '15.1.0' ],
+55 silly audit   'postcss-js': [ '4.0.1' ],
+55 silly audit   'postcss-load-config': [ '4.0.2' ],
+55 silly audit   'postcss-nested': [ '6.2.0' ],
+55 silly audit   'postcss-selector-parser': [ '6.1.2' ],
+55 silly audit   'postcss-value-parser': [ '4.2.0' ],
+55 silly audit   'prelude-ls': [ '1.2.1' ],
+55 silly audit   'prop-types': [ '15.8.1' ],
+55 silly audit   'proxy-from-env': [ '1.1.0' ],
+55 silly audit   punycode: [ '2.3.1' ],
+55 silly audit   'queue-microtask': [ '1.2.3' ],
+55 silly audit   react: [ '18.3.1' ],
+55 silly audit   'react-dom': [ '18.3.1' ],
+55 silly audit   'react-is': [ '16.13.1' ],
+55 silly audit   'read-cache': [ '1.0.0' ],
+55 silly audit   readdirp: [ '3.6.0' ],
+55 silly audit   'reflect.getprototypeof': [ '1.0.6' ],
+55 silly audit   'regexp.prototype.flags': [ '1.5.2' ],
+55 silly audit   'resolve-from': [ '4.0.0' ],
+55 silly audit   'resolve-pkg-maps': [ '1.0.0' ],
+55 silly audit   reusify: [ '1.0.4' ],
+55 silly audit   rimraf: [ '3.0.2' ],
+55 silly audit   'run-parallel': [ '1.2.0' ],
+55 silly audit   'safe-array-concat': [ '1.1.2' ],
+55 silly audit   'safe-regex-test': [ '1.0.3' ],
+55 silly audit   scheduler: [ '0.23.2' ],
+55 silly audit   'set-function-length': [ '1.2.2' ],
+55 silly audit   'set-function-name': [ '2.0.2' ],
+55 silly audit   shallowequal: [ '1.1.0' ],
+55 silly audit   'shebang-command': [ '2.0.0' ],
+55 silly audit   'shebang-regex': [ '3.0.0' ],
+55 silly audit   'side-channel': [ '1.0.6' ],
+55 silly audit   'signal-exit': [ '4.1.0' ],
+55 silly audit   'source-map-js': [ '1.2.1' ],
+55 silly audit   'stop-iteration-iterator': [ '1.0.0' ],
+55 silly audit   streamsearch: [ '1.1.0' ],
+55 silly audit   'string-width': [ '5.1.2', '4.2.3' ],
+55 silly audit   'string.prototype.includes': [ '2.0.0' ],
+55 silly audit   'string.prototype.matchall': [ '4.0.11' ],
+55 silly audit   'string.prototype.repeat': [ '1.0.0' ],
+55 silly audit   'string.prototype.trim': [ '1.2.9' ],
+55 silly audit   'string.prototype.trimend': [ '1.0.8' ],
+55 silly audit   'string.prototype.trimstart': [ '1.0.8' ],
+55 silly audit   'strip-bom': [ '3.0.0' ],
+55 silly audit   'strip-json-comments': [ '3.1.1' ],
+55 silly audit   'styled-components': [ '6.1.13' ],
+55 silly audit   tslib: [ '2.6.2', '2.7.0' ],
+55 silly audit   'styled-jsx': [ '5.1.1' ],
+55 silly audit   stylis: [ '4.3.2' ],
+55 silly audit   sucrase: [ '3.35.0' ],
+55 silly audit   'supports-color': [ '7.2.0' ],
+55 silly audit   'supports-preserve-symlinks-flag': [ '1.0.0' ],
+55 silly audit   tailwindcss: [ '3.4.12' ],
+55 silly audit   tapable: [ '2.2.1' ],
+55 silly audit   'text-table': [ '0.2.0' ],
+55 silly audit   thenify: [ '3.3.1' ],
+55 silly audit   'thenify-all': [ '1.6.0' ],
+55 silly audit   'to-regex-range': [ '5.0.1' ],
+55 silly audit   'ts-api-utils': [ '1.3.0' ],
+55 silly audit   'ts-interface-checker': [ '0.1.13' ],
+55 silly audit   'tsconfig-paths': [ '3.15.0' ],
+55 silly audit   'type-check': [ '0.4.0' ],
+55 silly audit   'type-fest': [ '0.20.2' ],
+55 silly audit   'typed-array-buffer': [ '1.0.2' ],
+55 silly audit   'typed-array-byte-length': [ '1.0.1' ],
+55 silly audit   'typed-array-byte-offset': [ '1.0.2' ],
+55 silly audit   'typed-array-length': [ '1.0.6' ],
+55 silly audit   typescript: [ '5.6.2' ],
+55 silly audit   'unbox-primitive': [ '1.0.2' ],
+55 silly audit   'undici-types': [ '6.19.8' ],
+55 silly audit   'uri-js': [ '4.4.1' ],
+55 silly audit   'util-deprecate': [ '1.0.2' ],
+55 silly audit   which: [ '2.0.2' ],
+55 silly audit   'which-boxed-primitive': [ '1.0.2' ],
+55 silly audit   'which-builtin-type': [ '1.1.4' ],
+55 silly audit   'which-collection': [ '1.0.2' ],
+55 silly audit   'which-typed-array': [ '1.1.15' ],
+55 silly audit   'word-wrap': [ '1.2.5' ],
+55 silly audit   'wrap-ansi': [ '8.1.0', '7.0.0' ],
+55 silly audit   wrappy: [ '1.0.2' ],
+55 silly audit   yaml: [ '2.5.1' ],
+55 silly audit   'yocto-queue': [ '0.1.0' ]
+55 silly audit }
+56 verbose reify failed optional dependency C:\Users\aleem\OneDrive\Documents\product_list_with_cart\node_modules\fsevents
+57 silly reify mark deleted [
+57 silly reify   'C:\\Users\\aleem\\OneDrive\\Documents\\product_list_with_cart\\node_modules\\fsevents'
+57 silly reify ]
+58 verbose reify failed optional dependency C:\Users\aleem\OneDrive\Documents\product_list_with_cart\node_modules\@next\swc-win32-ia32-msvc
+59 silly reify mark deleted [
+59 silly reify   'C:\\Users\\aleem\\OneDrive\\Documents\\product_list_with_cart\\node_modules\\@next\\swc-win32-ia32-msvc'
+59 silly reify ]
+60 verbose reify failed optional dependency C:\Users\aleem\OneDrive\Documents\product_list_with_cart\node_modules\@next\swc-win32-arm64-msvc
+61 silly reify mark deleted [
+61 silly reify   'C:\\Users\\aleem\\OneDrive\\Documents\\product_list_with_cart\\node_modules\\@next\\swc-win32-arm64-msvc'
+61 silly reify ]
+62 verbose reify failed optional dependency C:\Users\aleem\OneDrive\Documents\product_list_with_cart\node_modules\@next\swc-linux-x64-musl
+63 silly reify mark deleted [
+63 silly reify   'C:\\Users\\aleem\\OneDrive\\Documents\\product_list_with_cart\\node_modules\\@next\\swc-linux-x64-musl'
+63 silly reify ]
+64 verbose reify failed optional dependency C:\Users\aleem\OneDrive\Documents\product_list_with_cart\node_modules\@next\swc-linux-x64-gnu
+65 silly reify mark deleted [
+65 silly reify   'C:\\Users\\aleem\\OneDrive\\Documents\\product_list_with_cart\\node_modules\\@next\\swc-linux-x64-gnu'
+65 silly reify ]
+66 verbose reify failed optional dependency C:\Users\aleem\OneDrive\Documents\product_list_with_cart\node_modules\@next\swc-linux-arm64-musl
+67 silly reify mark deleted [
+67 silly reify   'C:\\Users\\aleem\\OneDrive\\Documents\\product_list_with_cart\\node_modules\\@next\\swc-linux-arm64-musl'
+67 silly reify ]
+68 verbose reify failed optional dependency C:\Users\aleem\OneDrive\Documents\product_list_with_cart\node_modules\@next\swc-linux-arm64-gnu
+69 silly reify mark deleted [
+69 silly reify   'C:\\Users\\aleem\\OneDrive\\Documents\\product_list_with_cart\\node_modules\\@next\\swc-linux-arm64-gnu'
+69 silly reify ]
+70 verbose reify failed optional dependency C:\Users\aleem\OneDrive\Documents\product_list_with_cart\node_modules\@next\swc-darwin-x64
+71 silly reify mark deleted [
+71 silly reify   'C:\\Users\\aleem\\OneDrive\\Documents\\product_list_with_cart\\node_modules\\@next\\swc-darwin-x64'
+71 silly reify ]
+72 verbose reify failed optional dependency C:\Users\aleem\OneDrive\Documents\product_list_with_cart\node_modules\@next\swc-darwin-arm64
+73 silly reify mark deleted [
+73 silly reify   'C:\\Users\\aleem\\OneDrive\\Documents\\product_list_with_cart\\node_modules\\@next\\swc-darwin-arm64'
+73 silly reify ]
+74 timing reifyNode:node_modules/fsevents Completed in 20ms
+75 timing reifyNode:node_modules/@next/swc-win32-ia32-msvc Completed in 20ms
+76 timing reifyNode:node_modules/@next/swc-win32-arm64-msvc Completed in 20ms
+77 timing reifyNode:node_modules/@next/swc-linux-x64-musl Completed in 19ms
+78 timing reifyNode:node_modules/@next/swc-linux-x64-gnu Completed in 19ms
+79 timing reifyNode:node_modules/@next/swc-linux-arm64-musl Completed in 20ms
+80 timing reifyNode:node_modules/@next/swc-linux-arm64-gnu Completed in 20ms
+81 timing reifyNode:node_modules/@next/swc-darwin-x64 Completed in 22ms
+82 timing reifyNode:node_modules/@next/swc-darwin-arm64 Completed in 22ms
+83 timing reify:unpack Completed in 25ms
+84 timing reify:unretire Completed in 0ms
+85 timing build:queue Completed in 20ms
+86 timing build:deps Completed in 20ms
+87 timing build Completed in 22ms
+88 timing reify:build Completed in 26ms
+89 timing reify:trash Completed in 14ms
+90 timing reify:save Completed in 988ms
+91 http fetch GET 200 https://registry.npmjs.org/npm 4693ms (cache miss)
+92 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 2173ms
+93 timing auditReport:getReport Completed in 2199ms
+94 silly audit report {}
+95 timing auditReport:init Completed in 0ms
+96 timing reify:audit Completed in 2201ms
+97 timing reify Completed in 5381ms
+98 silly ADD
+99 silly ADD
+100 silly ADD
+101 silly ADD
+102 silly ADD
+103 silly ADD
+104 silly ADD
+105 silly ADD
+106 silly ADD
+107 timing command:install Completed in 5442ms
+108 notice
+108 notice New [33mminor[39m version of npm available! [31m10.1.0[39m -> [32m10.8.3[39m
+108 notice Changelog: [36mhttps://github.com/npm/cli/releases/tag/v10.8.3[39m
+108 notice Run [32mnpm install -g npm@10.8.3[39m to update!
+108 notice
+109 verbose exit 0
+110 timing npm Completed in 6993ms
+111 info ok
