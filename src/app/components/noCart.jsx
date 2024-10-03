@@ -1,3 +1,4 @@
+import React from "react";
 import EmptyCart from "../SVGS/empty";
 
 const NoCart = () => {

@@ -1,4 +1,5 @@
 'use client'
+import React from "react"
 import { useContext } from "react"
 import { CartContext } from "../api/store/context"
 import IconConfirm from "../SVGS/iconConfirmed"

@@ -1,4 +1,5 @@
 'use client'
+import React from "react";
 import Meals from "./components/allMeals";
 import CartContextProvider from "./api/store/context";
 import CartModal from "./components/showcartModal";
