@@ -66,13 +66,13 @@ const CartContextProvider : React.FC<{children: ReactNode}> = ({children}) => {
     })    
   };
 
-  const removeFromCart = (val: dataType, i: number) => {
-    setCart((prev) => {
-      const allCarts = [...prev]
-      allCarts.splice(i, 1)
-      return allCarts
-    })
-  }
+  // const removeFromCart = (val: dataType, i: number) => {
+  //   setCart((prev) => {
+  //     const allCarts = [...prev]
+  //     allCarts.splice(i, 1)
+  //     return allCarts
+  //   })
+  // }
 
   const addCartQty = (val: dataType, i: number) => {
     const index = cart.findIndex(cart => cart.name === val.name)
@@ -129,7 +129,7 @@ const CartContextProvider : React.FC<{children: ReactNode}> = ({children}) => {
     select: select,
     isSubmit,
     addToCart: addToCart,
-    removeFromCart,
+    removeFromCart: () => {},
     minusCartQty,
     addCartQty,
     submitHnadler,

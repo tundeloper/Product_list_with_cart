@@ -2,7 +2,7 @@
 import { CartContext } from "../api/store/context";
 import CarbonNeutral from "../SVGS/carbonNeutral";
 import RemoveItem from "../SVGS/removeItem";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 
 const Cart : React.FC = () => {
     const context = useContext(CartContext)
@@ -10,7 +10,7 @@ const Cart : React.FC = () => {
 
     return <div className="flex flex-col font-bold">
         {context.cart.map((val, i) => {
-            return <div className="flex justify-between items-center mb-2 border-b border-lrd py-2" key={val.name}>
+            return <div className="flex justify-between items-center mb-2 border-b border-lrd py-2" key={i}>
                 <div>
                     <p className="text-black">{val.name}</p>
                     <p className="text-black"><span className="text-rd">{val.qty}x</span> <span className="font-light text-rd ml-2">@{val.price.toFixed(2)}</span> <span className="font-light text-rd ml-2">${val.qty * val.price}</span></p>

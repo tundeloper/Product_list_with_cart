@@ -8,7 +8,7 @@ const ConfirmCart : React.FC = ()  => {
     const contex = useContext(CartContext)
     const total = contex.cart.reduce((total, item) => total + (item.price * item.qty), 0)
     const w = window.innerWidth
-    const priceQty = (data: any) => {
+    const priceQty = (data: {price: number, qty: number}) => {
         return data.price * data.qty
     }
 

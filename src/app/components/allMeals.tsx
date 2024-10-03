@@ -20,7 +20,7 @@ const Meals : React.FC = () => {
     const [error, setError] = useState(null);
     const context = useContext(CartContext);
     const cart = context.cart;
-    let w : number = window.innerWidth
+    const w : number = window.innerWidth
 
     useEffect(() => {
         // Make the GET request to your Next.js API route
