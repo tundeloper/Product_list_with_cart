@@ -1,10 +1,11 @@
 import React from "react";
 
-const RemoveItem: React.FC = () => {
+const RemoveItem: React.FC<{removeItem: () => void}> = ({removeItem}) => {
   return (
     <button
       className="border p-2 border-lrd rounded-full pointer"
-      aria-label="Remove Item" // Accessibility improvement
+      aria-label="Remove Item"
+      onClick={removeItem}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

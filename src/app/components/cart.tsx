@@ -14,6 +14,10 @@ const Cart: React.FC = () => {
     0
   );
 
+  const removeHandler = () => {
+    console.log('clicked')
+  }
+
   return (
     <div className="flex flex-col font-bold">
       {/* Iterate over cart items */}
@@ -36,7 +40,7 @@ const Cart: React.FC = () => {
           </div>
           {/* Add functionality for RemoveItem if needed */}
           <div>
-            <RemoveItem />
+            <RemoveItem removeItem={() => {context.removeFromCart(val, i)}} />
           </div>
         </div>
       ))}

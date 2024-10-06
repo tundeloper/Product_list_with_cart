@@ -8,15 +8,7 @@ import DecrementSvg from "../SVGS/decrement";
 import IncrementSvg from "../SVGS/increment";
 import { CartContext } from "../api/store/context";
 
-type dataType = {
-  image: {thumbnail: string, mobile: string, tablet: string, desktop: string},
-  name: string,
-  price: number,
-  category: string,
-}
-
 const Meals : React.FC = () => {
-    const [data, setData] = useState<dataType[]>([]);
     const [loading, setLoading] = useState(true); 
     const [error, setError] = useState<string | null>(null);
     const context = useContext(CartContext);
@@ -27,7 +19,8 @@ const Meals : React.FC = () => {
         // Make the GET request to your Next.js API route
         axios.get('/api')
           .then((response) => {
-            setData(response.data.data);  // Set the response data
+            // console.log(response.data.data)
+            context.fetchData(response.data.data);  // Set the response data
             setLoading(false);       // Stop loading state
           })
           .catch((err) => {
@@ -40,7 +33,7 @@ const Meals : React.FC = () => {
       if (error) return <p>Error: {error}</p>;
 
     return <div className="grid-cols-1 sm:grid sm:grid-cols-3 sm:gap-4">
-      {data.map((meals, i) => {
+      {context.data.map((meals, i) => {
         const cartItemIndex = cart.findIndex((cartItem) => cartItem.name === meals.name);
         const quantity = cartItemIndex > -1 ? cart[cartItemIndex].qty : 0;
         

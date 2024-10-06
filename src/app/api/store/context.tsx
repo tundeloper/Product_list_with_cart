@@ -1,7 +1,7 @@
 import React, { ReactNode, useState } from "react";
 
 // Define a type for the product data
-type DataType = {
+type cartType = {
   image: {
     thumbnail: string;
     mobile: string;
@@ -14,15 +14,24 @@ type DataType = {
   qty: number;
 };
 
+type dataType = {
+  image: {thumbnail: string, mobile: string, tablet: string, desktop: string},
+  name: string,
+  price: number,
+  category: string,
+}
+
 // Define a type for the context data
 type DataObject = {
-  cart: DataType[];
+  cart: cartType[];
+  data: dataType[];
   select: string[];
   isSubmit: boolean;
-  addToCart: (val: DataType, i: number) => void; // Specify the type of parameters
-  removeFromCart: (val: DataType, i: number) => void; // Specify the type of parameters
-  minusCartQty: (val: DataType, i: number) => void; // Specify the type of parameters
-  addCartQty: (val: DataType, i: number) => void; // Specify the type of parameters
+  fetchData: (val: dataType[]) => void; // Specify the type of parameters
+  addToCart: (val: cartType, i: number) => void; // Specify the type of parameters
+  removeFromCart: (val: cartType, i: number) => void; // Specify the type of parameters
+  minusCartQty: (val: cartType, i: number) => void; // Specify the type of parameters
+  addCartQty: (val: cartType, i: number) => void; // Specify the type of parameters
   submitHandler: (val: boolean) => void; // Specify the type of parameters
   completeOrder: () => void; // Specify return type as void
 };
@@ -30,8 +39,10 @@ type DataObject = {
 // Define the initial state
 const initialState: DataObject = {
   cart: [],
+  data: [],
   select: Array(9).fill("notSelect"),
   isSubmit: false,
+  fetchData: () => {},
   addToCart: () => {},
   removeFromCart: () => {},
   minusCartQty: () => {},
@@ -44,11 +55,16 @@ const initialState: DataObject = {
 export const CartContext = React.createContext<DataObject>(initialState);
 
 const CartContextProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [cart, setCart] = useState<DataType[]>([]);
+  const [cart, setCart] = useState<cartType[]>([]);
+  const [data, setData] = useState<dataType[]>([]);
   const [isSubmit, setIsSubmit] = useState<boolean>(false);
   const [select, setSelect] = useState<string[]>(Array(9).fill("notSelect"));
 
-  const addToCart = (val: DataType, i: number) => {
+  const fetchData = (val: dataType[]) => {
+    setData(val)
+  }
+
+  const addToCart = (val: cartType, i: number) => {
     setSelect((prev) => {
       const newSelect = [...prev];
       newSelect[i] = "select";
@@ -75,23 +91,24 @@ const CartContextProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     });
   };
 
-  const removeFromCart = (val: DataType, i: number) => {
+  const removeFromCart = (val: cartType, i: number) => {
+    const dataIndex = data.findIndex((data) => data.name === val.name)
     setCart((prev) => {
       const allCarts = [...prev];
-      const index = allCarts.findIndex((cartItem) => cartItem.name === val.name);
-      if (index > -1) {
-        allCarts.splice(index, 1); // Remove the item from the cart
+      const cartIndex = allCarts.findIndex((cartItem) => cartItem.name === val.name);
+      if (cartIndex > -1) {
+        allCarts.splice(cartIndex, 1); // Remove the item from the cart
       }
       return allCarts;
     });
     setSelect((prev) => {
       const newSelect = [...prev];
-      newSelect[i] = "notSelect"; // Update select state
+      newSelect[dataIndex] = "notSelect"; // Update select state
       return newSelect;
     });
   };
 
-  const addCartQty = (val: DataType, i: number) => {
+  const addCartQty = (val: cartType, i: number) => {
     setCart((prev) => {
       const index = prev.findIndex((cartItem) => cartItem.name === val.name);
       const allCarts = [...prev];
@@ -108,7 +125,7 @@ const CartContextProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     });
   };
 
-  const minusCartQty = (val: DataType, i: number) => {
+  const minusCartQty = (val: cartType, i: number) => {
     setCart((prev) => {
       const index = prev.findIndex((cartItem) => cartItem.name === val.name);
       const allCarts = [...prev];
@@ -146,8 +163,10 @@ const CartContextProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
   const cartValue: DataObject = {
     cart,
+    data,
     select,
     isSubmit,
+    fetchData,
     addToCart,
     removeFromCart,
     minusCartQty,
