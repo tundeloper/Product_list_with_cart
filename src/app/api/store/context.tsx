@@ -58,7 +58,7 @@ const CartContextProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   const [cart, setCart] = useState<cartType[]>([]);
   const [data, setData] = useState<dataType[]>([]);
   const [isSubmit, setIsSubmit] = useState<boolean>(false);
-  const [select, setSelect] = useState<string[]>(Array(9).fill("notSelect"));
+  const [select, setSelect] = useState<string[]>(Array(data.length).fill("notSelect"));
 
   const fetchData = (val: dataType[]) => {
     setData(val)
