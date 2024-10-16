@@ -1,6 +1,6 @@
 "use client";
 import React, { useContext, useState, useEffect } from "react";
-import { CartContext } from "../api/store/context";
+import { CartContext } from "../store/context";
 import IconConfirm from "../SVGS/iconConfirmed";
 import Image from "next/image";
 

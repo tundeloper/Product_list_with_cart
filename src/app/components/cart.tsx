@@ -1,7 +1,7 @@
 'use client'
 import React from "react";
 import { useContext } from "react";
-import { CartContext } from "../api/store/context";
+import { CartContext } from "../store/context";
 import CarbonNeutral from "../SVGS/carbonNeutral";
 import RemoveItem from "../SVGS/removeItem";
 
