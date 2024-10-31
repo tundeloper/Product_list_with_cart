@@ -7,6 +7,7 @@ import CartSvg from "../SVGS/cart";
 import DecrementSvg from "../SVGS/decrement";
 import IncrementSvg from "../SVGS/increment";
 import { CartContext } from "../store/context";
+import Loading from "./loading";
 
 const Meals : React.FC = () => {
     const [loading, setLoading] = useState(true); 
@@ -29,7 +30,7 @@ const Meals : React.FC = () => {
           });
       }, []);
 
-      if (loading) return <h1 className="text-dk">Loading</h1>;
+      if (loading) return <Loading />;
       if (error) return <p>Error: {error}</p>;
 
     return <div className="grid-cols-1 sm:grid sm:grid-cols-3 sm:gap-4">
